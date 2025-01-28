@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const { connectdb } = require("./db");
 const quizRoutes = require("./routes/quizRoutes");
 // const dspRoutes = require("./routes/DSPRoutes");
 // const spRoutes = require("./routes/SPRoutes");
@@ -9,7 +8,6 @@ const quizRoutes = require("./routes/quizRoutes");
 // const igRoutes = require("./routes/IGRoutes");
 // const locationRoutes = require("./routes/locationRoutes");
 const path = require("path");
-const upload = require("./middleware/multerconfig");
 
 const app = express();
 app.use(bodyParser.json());
@@ -30,12 +28,10 @@ app.use(
 // Handle preflight requests for all routes
 app.options("*", cors()); // This will handle the OPTIONS preflight request for all routes
 
-connectdb();
-
 app.use("/test", (req, res) => {
   res.send("testing22");
 });
 
 app.use("/api/quizgenerate", quizRoutes);
 
-app.listen(3000, () => console.log("server running"));
+app.listen(4000, () => console.log("server running"));
