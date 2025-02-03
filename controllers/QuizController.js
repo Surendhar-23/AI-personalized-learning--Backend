@@ -1,6 +1,8 @@
 // Ensure you have node-fetch installed
 
-const GEMINI_API_KEY = "AIzaSyCWkN0KDOugV_37GfyLTuykMTuh2DKyaVQ"; // Replace with your actual API key
+// const GEMINI_API_KEY = "AIzaSyCWkN0KDOugV_37GfyLTuykMTuh2DKyaVQ"; // Replace with your actual API key
+
+const GEMINI_API_KEY = "AIzaSyCh3EoFNilJ3zQVrUOMadqbHwKkzqpfWE4";
 
 const generateQuiz = async (req, res) => {
   try {
